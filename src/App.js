@@ -6,16 +6,19 @@ import About from "./components/about";
 import Contact from "./components/contact";
 import Error from "./components/error";
 import Navigation from "./components/navigation";
+import RootsToolbar from "./components/toolbar";
 
 import './App.css';
 import './styles/global.css';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <div className="fillParent">
+            <RootsToolbar/>
             <Navigation />
             <Switch>
             <Route path="/" component={Home} exact/>

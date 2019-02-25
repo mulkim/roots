@@ -19,11 +19,12 @@ class Home extends Component {
         return (
         <div className={classNames('fillParent', classes.container)}>
             <Typography 
-            variant="h6"
-            color="inherit"
-            >Home</Typography>
+                variant="h6"
+                color="inherit">
+            Home
+            </Typography>
         </div>
-    );
+        );
     }
 }
 
