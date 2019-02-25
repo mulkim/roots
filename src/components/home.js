@@ -15,9 +15,13 @@ const styles = {
 
 class Home extends Component {
     render() {
-    return (
-        <div>
-            <p>Home</p>
+        const {classes} = this.props;
+        return (
+        <div className={classNames('fillParent', classes.container)}>
+            <Typography 
+            variant="h6"
+            color="inherit"
+            >Home</Typography>
         </div>
     );
     }
