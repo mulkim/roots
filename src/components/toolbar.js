@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { AppBar, Button, IconButton, Toolbar, Typography, withStyles } from '@material-ui/core';
 import { Person, Menu } from '@material-ui/icons';
 
-
 const styles = theme => ({
   appBar: {
     textAlign: 'center',

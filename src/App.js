@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch} from "react-router-dom";
+import { withStyles } from '@material-ui/core';
 
 import Home from "./components/home";
 import About from "./components/about";
@@ -11,15 +12,21 @@ import RootsToolbar from "./components/toolbar";
 import './App.css';
 import './styles/global.css';
 
+const styles = theme => ({
+  toolbar: theme.mixins.toolbar,
+});
+
 class App extends Component {
 
   render() {
+    const { classes } = this.props;
     return (
       <div className="App">
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <div className="fillParent">
             <RootsToolbar/>
             <Navigation />
+            <div className={classes.toolbar} />
             <Switch>
             <Route path="/" component={Home} exact/>
             <Route path="/about" component={About}/>
@@ -33,4 +40,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withStyles(styles)(App);
