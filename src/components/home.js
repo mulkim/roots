@@ -1,5 +1,5 @@
 import React, { Component} from "react";
-import { withStyles, Typography, MuiThemeProvider } from "@material-ui/core";
+import { withStyles, Typography } from "@material-ui/core";
 import classNames from 'classname';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
@@ -36,7 +36,10 @@ class Home extends Component {
             </Typography>
             <Grid container spacing={24}>
               <Grid item xs={12}>
-                <Paper className={classes.paper}>xs=12</Paper>
+                <Paper className={classes.paper}>
+                mulki=12
+                <img className={classes.img} alt="nature" src="nature.jpg" />
+                </Paper>
               </Grid>
               <Grid item xs={4}>
                 <Paper className={classes.paper}>xs=4</Paper>
