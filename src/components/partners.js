@@ -1,9 +1,14 @@
 import React from "react";
+import { Typography } from "@material-ui/core";
 
 const Partners = () => {
     return (
         <div>
-            <h6>Partners</h6>
+            <Typography 
+                variant="h6"
+                color="inherit">
+            Partners
+            </Typography>
         </div>
     );
 }

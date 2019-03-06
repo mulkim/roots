@@ -1,9 +1,14 @@
 import React from "react";
+import { Typography } from "@material-ui/core";
 
 const Jobs = () => {
     return (
         <div>
-            <h6>Jobs</h6>
+            <Typography 
+                variant="h6"
+                color="inherit">
+            Jobs
+            </Typography>
         </div>
     );
 }
