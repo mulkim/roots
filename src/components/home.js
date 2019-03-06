@@ -1,12 +1,16 @@
 import React, { Component} from "react";
 import { withStyles } from "@material-ui/core";
+import PropTypes from 'prop-types';
 import classNames from 'classname';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
+
+import Card from '@material-ui/core/Card';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardActionArea from '@material-ui/core/CardActionArea';
 
 import '../styles/global.css';
+import placeholder from './Nature.jpg';
 
 const styles = theme => ({
     container: {
@@ -27,10 +31,12 @@ const styles = theme => ({
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
-    gridList: {
-        width: 500,
-        height: 450,
+    card: {
+        height: 350,
     },
+    media: {
+        height: 350,
+    }
   });
 
 class Home extends Component {
@@ -40,16 +46,13 @@ class Home extends Component {
         <div className={classNames('fillParent', classes.container, classes.root)}>
             <Grid container spacing={24}>
               <Grid item xs={12}>
-              <GridList cellHeight={160} className={classes.gridList} cols={1}>
-                {
-                    <GridListTile cols={1}>
-                        <img src='nature.jpg' alt='nature' />
-                    </GridListTile>
-                    }
-                </GridList>
-                <Paper className={classes.paper}>
-                image placeholder
-                </Paper>
+              <Card className={classes.card}>
+                <CardMedia
+                    className={classes.media}
+                    image={placeholder}
+                    title="Nature"
+                />
+              </Card>
               </Grid>
               <Grid item xs={4}>
                 <Paper className={classes.paper}>
@@ -81,5 +84,9 @@ class Home extends Component {
         );
     }
 }
+
+Home.propTypes = {
+    classes: PropTypes.object.isRequired,
+  };
 
 export default withStyles(styles)(Home);
