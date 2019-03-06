@@ -1,69 +1,62 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { AppBar, Button, IconButton, Toolbar, Typography, withStyles } from '@material-ui/core';
-import { Person, Menu } from '@material-ui/icons';
+import PropTypes from 'prop-types';
+import { AppBar, withStyles, Tab, Tabs, NoSsr } from '@material-ui/core';
+
 
 const styles = theme => ({
-  appBar: {
-    textAlign: 'center',
-    zIndex: 1400,
-  },
-  loginButtonIcon: {
-    marginRight: theme.spacing.unit,
-    fontSize: 20,
-  },
-  toolbar: {
-    justifyContent: 'space-between'
-  },
-  title: {
-    position: 'absolute',
-    left: 0,
-    right: 0
+  root: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.paper,
   }
 });
 
 class RootsToolbar extends Component {
+  state = {
+    value: 0,
+  };
+
+  handleChange = (event, value) => {
+    this.setState({ value });
+  };
+
   render() {
-    const { classes, onMenuClicked } = this.props;
+    const { classes } = this.props;
+    const { value } = this.state;
+
     return (
-      <AppBar
-        className={classes.appBar}
-        position="fixed">
-        <Toolbar className={classes.toolbar}>
-          <Typography 
-              variant="h6" 
-              color="inherit"
-              className={classes.title}>
-              ROOTS
-            </Typography>
-          {
-            // This button passes its onClick prop to the onMenuClicked prop.
-            // If you look back at App.js, this essentially tells App to open
-            // the drawer.
-          }
-          <IconButton
-            className={classes.menuButton}
-            color="inherit" 
-            onClick={onMenuClicked}>
-            <Menu />
-          </IconButton>
-          {
-            // This button uses the Link component to redirect the user to the
-            // login page. Note that BobaToolbar doesn't need withRouter
-            // because it's built into the Link component.
-          }
-          <Button
-            color="inherit"
-            className={classes.loginButton}
-            component={Link}
-            to="/about">
-            <Person className={classes.loginButtonIcon}/>
-            Login
-          </Button>
-        </Toolbar>
-      </AppBar>
+      <NoSsr>
+      <div className={classes.root}>
+        <AppBar position="fixed">
+          <Tabs variant="fullWidth" value={value} onChange={this.handleChange}>
+            <Tab label="Home"
+                  component={Link} 
+                  to='/'/>
+            <Tab label="About"
+                  component={Link}  
+                  to='/about'/>
+            <Tab label="Jobs" 
+                  component={Link}  
+                  to="jobs" />
+            <Tab label="Partners"
+                  component={Link}  
+                  to="partners" />
+            <Tab label="Learn" 
+                  component={Link}  
+                  to="learn" />
+            <Tab label="Contact"
+                  component={Link}  
+                  to="contact" />
+          </Tabs>
+        </AppBar>
+      </div>
+      </NoSsr>
     );
   }
 }
+
+RootsToolbar.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
 
 export default withStyles(styles)(RootsToolbar);
