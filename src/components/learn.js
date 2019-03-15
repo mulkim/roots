@@ -1,16 +1,16 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
 
-const About = () => {
+const Learn = () => {
     return (
         <div>
             <Typography 
                 variant="h6"
                 color="inherit">
-            About
+            Learn
             </Typography>
         </div>
     );
 }
 
-export default About;
+export default Learn;

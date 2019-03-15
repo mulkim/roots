@@ -4,6 +4,9 @@ import { withStyles } from '@material-ui/core';
 
 import Home from "./components/home";
 import About from "./components/about";
+import Jobs from "./components/jobs";
+import Partners from "./components/partners";
+import Learn from "./components/learn";
 import Contact from "./components/contact";
 import Error from "./components/error";
 import Navigation from "./components/navigation";
@@ -30,6 +33,9 @@ class App extends Component {
             <Switch>
             <Route path="/" component={Home} exact/>
             <Route path="/about" component={About}/>
+            <Route path="/jobs" component={Jobs}/>
+            <Route path="/partners" component={Partners}/>
+            <Route path="/learn" component={Learn}/>
             <Route path="/contact" component={Contact}/>
             <Route component={Error}/>
             </Switch>
