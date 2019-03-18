@@ -1,4 +1,7 @@
-import Modal from '@material-ui/core/Modal';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import React, {Component} from "react";
 import { Typography } from "@material-ui/core";
 
@@ -26,12 +29,6 @@ import researchers from './researchers.jpg';
 import volunteer from './volunteer.jpg';
 
 let models = fakejobs;
-let modal1 = false;
-let modal2 = false;
-let modal3 = false;
-let modal4 = false;
-let modal5 = false;
-let modal6 = false;
 
 const styles = theme => ({
     container: {
@@ -97,7 +94,7 @@ class Jobs extends Component {
                         <Filter />
                     </Grid>
                     <Grid item xs={8}>
-                        <Grid item xs={12}>
+                        <Grid item xs={10}>
                         <Card className={classes.card}>
                         <CardActionArea>
                         <Paper className={classes.paper}>
@@ -124,20 +121,40 @@ class Jobs extends Component {
                             <Typography component="p">
                                 {models[0]['info']}
                             </Typography>
-                        </CardContent>
-                        </Paper>
-                        </CardActionArea>
+                            <ExpansionPanel>
+                                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                                    <Typography className={classes.heading}>Qualifications</Typography>
+                                </ExpansionPanelSummary>
+                                <ExpansionPanelDetails>
+                                    <Typography>
+                                    Drafting skills <br />
+                                    General knowledge of Architectural CAD Standards <br />
+                                    Following company drawing standards <br />
+                                    Great sheet layouts are a must <br />
+                                    Detailed drafting <br />
+                                    Appropriate layering, grouping, blocking, & file organization <br />
+                                    Composing Bill of Materials <br />
+                                    Rhino 3D architectural/industrial modeling <br />
+                                    Ability to be flexible & manage time resources with multiple projects <br />
+                                    Must be able to collaborate, organize, & communicate in a team environment <br />
+                                    Architectural Portfolio to show at the time of interview <br />
+                                    Drafting: 3 years (Required) <br />
+                                    Architectural Design: 3 years (Required) <br />
+                                    Bachelor's (Preferred) <br />
+                                    </Typography>
+                                </ExpansionPanelDetails>
+                            </ExpansionPanel>
                         <CardActions>
-                            <Button size="small" color="primary">
-                                Read More
-                            </Button>
                             <Button size="small" href="https://www.ezega.com/Jobs/viewjobposting/52785/index/Architecture-Designer?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic" color="primary">
                                 Apply Now
                             </Button>
                         </CardActions>
+                        </CardContent>
+                        </Paper>
+                        </CardActionArea>
                         </Card>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={10}>
                         <Card className={classes.card}>
                         <CardActionArea>
                         <Paper className={classes.paper}>
@@ -165,20 +182,30 @@ class Jobs extends Component {
                             <Typography component="p">
                                 {models[1]['info']}
                             </Typography>
-                        </CardContent>
-                        </Paper>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button size="small" color="primary">
-                                Read More
-                            </Button>
+                            <ExpansionPanel>
+                                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                                    <Typography className={classes.heading}>Qualifications</Typography>
+                                </ExpansionPanelSummary>
+                                <ExpansionPanelDetails>
+                                    <Typography>
+                                    Bachelor’s Degree in Nursing <br />
+                                    Current Enrollment in a BSN Program OR Commitment to Achieve a BSN Degree <br />
+                                    Licensed as a Registered Nurse <br />
+                                    Three years acute care nursing experience or one-year acute care nursing experience plus two years leadership experience required. <br />
+                                    </Typography>
+                                </ExpansionPanelDetails>
+                            </ExpansionPanel>
+                            <CardActions>
                             <Button size="small" href="https://www.linkedin.com/jobs/view/nurse-manager-at-cure-international-inc-532717317/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic" color="primary">
                                 Apply Now
                             </Button>
-                        </CardActions>
+                            </CardActions>
+                        </CardContent>
+                        </Paper>
+                        </CardActionArea>
                         </Card>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={10}>
                         <Card className={classes.card}>
                         <CardActionArea>
                         <Paper className={classes.paper}>
@@ -206,20 +233,32 @@ class Jobs extends Component {
                             <Typography component="p">
                                 {models[2]['info']}
                             </Typography>
-                        </CardContent>
-                        </Paper>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button size="small" conClick={this.handleOpen} olor="primary">
-                                Read More
-                            </Button>
+                            <ExpansionPanel>
+                                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                                    <Typography className={classes.heading}>Qualifications</Typography>
+                                </ExpansionPanelSummary>
+                                <ExpansionPanelDetails>
+                                    <Typography>
+                                    Coordination with in-house architects and outside design consultants (Structural Engineers, Mechanical/Electrical/Plumbing, Geotechnical Engineers, Landscape Architects, Environmental Scientists, Geologists, Etc.) <br />
+                                    Technical leadership support to in-house property development team. <br />
+                                    Direct communication with project permitting agencies. <br />
+                                    Civil Engineer: 5 years (Required) <br />
+                                    Bachelor's (Required) <br />
+                                    Off-site Frontage/Urban Streets <br />
+                                    </Typography>
+                                </ExpansionPanelDetails>
+                            </ExpansionPanel>
+                            <CardActions>
                             <Button size="small" href="https://etcareers.com/job/10574/civil-engineer/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic" color="primary">
                                 Apply Now
                             </Button>
-                        </CardActions>
+                            </CardActions>
+                        </CardContent>
+                        </Paper>
+                        </CardActionArea>
                         </Card>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={10}>
                         <Card className={classes.card}>
                         <CardActionArea>
                         <Paper className={classes.paper}>
@@ -247,20 +286,31 @@ class Jobs extends Component {
                             <Typography component="p">
                                 {models[3]['info']}
                             </Typography>
-                        </CardContent>
-                        </Paper>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button size="small" onClick={this.handleOpen} color="primary">
-                                Read More
-                            </Button>
+                            <ExpansionPanel>
+                                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                                    <Typography className={classes.heading}>Qualifications</Typography>
+                                </ExpansionPanelSummary>
+                                <ExpansionPanelDetails>
+                                    <Typography>
+                                    Are passionate about open science and collaboration <br />
+                                    Are in a graduate program studying computational biology and want to get hands-on experience <br />
+                                    Are proficient in R or Python <br />
+                                    Have extensive knowledge of machine learning or statistics <br />
+                                    Enjoy working in a dynamic team environment <br />
+                                    </Typography>
+                                </ExpansionPanelDetails>
+                            </ExpansionPanel>
+                            <CardActions>
                             <Button size="small" href="https://www.linkedin.com/jobs/view/senior-research-associate-at-laterite-1174810854/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic" color="primary">
                                 Apply Now
                             </Button>
-                        </CardActions>
+                            </CardActions>
+                        </CardContent>
+                        </Paper>
+                        </CardActionArea>
                         </Card>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={10}>
                         <Card className={classes.card}>
                         <CardActionArea>
                         <Paper className={classes.paper}>
@@ -288,17 +338,29 @@ class Jobs extends Component {
                             <Typography component="p">
                                 {models[4]['info']}
                             </Typography>
-                        </CardContent>
-                        </Paper>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button size="small" onClick={this.handleOpen} color="primary">
-                                Read More
-                            </Button>
+                            <ExpansionPanel>
+                                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                                    <Typography className={classes.heading}>Qualifications</Typography>
+                                </ExpansionPanelSummary>
+                                <ExpansionPanelDetails>
+                                    <Typography>
+                                    As a Volunteer, you would provide heart centered comfort rounds and act as a liaison and communicate with patient/family/guests. This volunteer position would include: <br />
+                                    Bed-side Support <br />
+                                    Answering Patient Call Lights <br />
+                                    Supporting the Nursing Care Team with Errands <br />
+                                    Maintaining a Safe Environment <br />
+                                    Assisting with Discharge of our Patients <br />
+                                    </Typography>
+                                </ExpansionPanelDetails>
+                            </ExpansionPanel>
+                            <CardActions>
                             <Button size="small" href="https://www.linkedin.com/jobs/view/volunteer-intern-%28monitoring%29-at-un-world-food-programme-wfp-1167252387/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"  color="primary">
                                 Apply Now
                             </Button>
-                        </CardActions>
+                            </CardActions>
+                        </CardContent>
+                        </Paper>
+                        </CardActionArea>
                         </Card>
                         </Grid>
                         </Grid>
