@@ -104,7 +104,7 @@ function Footer(props) {
           </Grid>
           </Grid>
           <Grid item xs={12} /*sm={4} md={2}*/>
-              <Grid item>© 2019 ROOTS. All Rights Reserved. </Grid>
+              <Grid item> © 2019 ROOTS. All Rights Reserved. </Grid>
           </Grid>
         </Grid>
     </Typography>

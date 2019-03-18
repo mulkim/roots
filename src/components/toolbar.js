@@ -3,12 +3,19 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { AppBar, withStyles, Tab, Tabs, NoSsr } from '@material-ui/core';
 import { Typography } from "@material-ui/core";
+import { EditorBorderRight } from 'material-ui/svg-icons';
 
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
+  },
+  name: {
+    textAlign: 'left',
+  },
+  menubar: {
+    marginLeft: 350,
   }
 });
 
@@ -30,11 +37,14 @@ class RootsToolbar extends Component {
       <div className={classes.root}>
         <AppBar position="absolute">
           <Tabs variant="standard" value={value} onChange={this.handleChange}>
-          <Typography 
+          <div className={classes.name}>
+            <Typography 
                 variant="h6"
                 color="inherit">
-            ROOTS
+              ROOTS
             </Typography>
+            </div>
+            <div className={classes.menubar}>
             <Tab label="Home"
                   component={Link} 
                   to='/'/>
@@ -53,6 +63,7 @@ class RootsToolbar extends Component {
             <Tab label="Contact"
                   component={Link}  
                   to="/contact" />
+              </div>
           </Tabs>
         </AppBar>
       </div>
