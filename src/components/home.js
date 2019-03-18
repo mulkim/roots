@@ -119,11 +119,12 @@ class Home extends Component {
                         <Typography component="p">
                             Strengthen the connection between fellow job seekers and 
                             Ethiopia's companies through the ROOTS community.
+                            <br />
                         </Typography>
+                        </CardContent>
                         <Button variant="contained" color="primary" a href= "./partners">
-                Partner with Us
-                </Button>
-                    </CardContent>
+                          Partner with Us
+                        </Button>
                 </CardActionArea>
               </Card>
               </Grid>
@@ -143,10 +144,10 @@ class Home extends Component {
                             Learn more about about the culture of Ethiopia to help you
                             relocate to the country
                         </Typography>
+                        </CardContent>
                         <Button variant="contained" color="primary" a href= "./learn">
                         Learn
                         </Button>
-                    </CardContent>
                 </CardActionArea>
               </Card>
               </Grid> 
