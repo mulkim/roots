@@ -15,6 +15,13 @@ import Button from '@material-ui/core/Button';
 
 import '../styles/global.css';
 import placeholder1 from './teams.png';
+import job_app from './job_app.jpg';
+import partner from './partner.jpg';
+
+import mustaf from './mustaf.jpg';
+import nathanial from './nathanial.JPG';
+import rahel from './Rahel.jpg';
+import samia from './Samia.jpg';
 
 
 const styles = theme => ({
@@ -23,6 +30,9 @@ const styles = theme => ({
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
+    },
+    button: {
+        margin: theme.spacing.unit,
     },
     root: {
         flexGrow: 1,
@@ -71,12 +81,16 @@ class Home extends Component {
                     About Roots
                     </Typography>
                     <Typography component="p">
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
+                    Our Mission is to provide necessary tools for individuals to find employment in Ethiopia while helping them with smoother relocation processes.  
+                    We strive to partner with small-medium to enterprise businesses. Our site provides 100% free job postings for our partners to find top talent. 
+                    We aim to build relations between the US and Ethiopia to drive innovation around the world. As we expand, we hope to partner with the United States 
+                     Embassy in Ethiopia to provide employment seekers in the US further relocation resources.  
+
+                    The long-term plan is to connect students in the United States with
+                    businesses and opportunities in Africa. The goal is to create a large network
+                    of Black students who want to start their professions in Africa. We have
+                    decided to begin by focusing their efforts on connecting students with jobs
+                    and internships in Ethiopia but plan to spread out across the entire contient.
                  </Typography>
                 </Paper> 
 
@@ -89,17 +103,16 @@ class Home extends Component {
                 component="img"
                 className={classes.card_media}
                 height="40"
-                image={placeholder1}
+                image={job_app}
                 />
                 <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                    Jobs
+                    Looking for a Job?
                 </Typography>
                 <Typography component="p">
-                    BENEFITS
-                    BENEFITS
-                    BENEFITS
-                    BENEFITS
+                    Roots helps to connect people that are looking for employment in Ethiopia with 
+                    opportunities abroad. Roots makes sure every job is legitmate and providers
+                    job-seekers with the tools to apply for jobs.
                 </Typography>
                 </CardContent>
             </CardActionArea>
@@ -118,17 +131,16 @@ class Home extends Component {
                 component="img"
                 className={classes.card_media}
                 height="140"
-                image={placeholder1}
+                image={partner}
                 />
                 <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                    Partners
+                    Partner with us to Find an Employee
                 </Typography>
                 <Typography component="p">
-                    BENEFITS
-                    BENEFITS
-                    BENEFITS
-                    BENEFITS
+                    Partner with Roots to post your job opportunities on our platform. We help to prepare
+                    your job descriptions and connect you with qualified job applicants that will excel
+                    in your positions. Parter with us to fill your vacant positions.
                 </Typography>
                 </CardContent>
             </CardActionArea>
@@ -148,113 +160,107 @@ class Home extends Component {
                     The Team
                     </Typography>
                     <Typography component="p">
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
+                    Our team here at Roots is made of professionals that come from all backgrounds and
+                    our commmited to help give resources to the next generation to find their dream
+                    jobs in Ethiopia. Meet our team members below and feel free to connect with us on LinkedIn.
                  </Typography>
                 </Paper> 
             </Grid>
 
+            <Grid item xs={3}>
             <Card className={classes.card}>
             <CardActionArea>
                 <CardMedia
                 component="img"
                 className={classes.media}
                 height="140"
-                //image={placeholder1}
+                image={samia}
                 />
                 <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                    Member #1
-                </Typography>
-                <Typography component="p">
-                    About
+                Samia Mohammed
                 </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
                 <Button variant="contained" color="primary">
-                Link to LinkedIn
+                Connect
                 </Button>
             </CardActions>
             </Card>
+            </Grid>
 
+            <Grid item xs={3}>
             <Card className={classes.card}>
             <CardActionArea>
                 <CardMedia
                 component="img"
                 className={classes.media}
                 height="140"
-                //image={placeholder1}
+                image={mustaf}
                 />
                 <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                    Member #2
-                </Typography>
-                <Typography component="p">
-                    About
+                Mustaf Ali
                 </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
                 <Button variant="contained" color="primary">
-                Link to LinkedIn
+                Connect
                 </Button>
             </CardActions>
             </Card>
+            </Grid>
 
 
+            <Grid item xs={3}>
             <Card className={classes.card}>
             <CardActionArea>
                 <CardMedia
                 component="img"
                 className={classes.media}
                 height="140"
-                //image={placeholder1}
+                image={rahel}
                 />
                 <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                    Member #3
+                Rahel Tesfay
                 </Typography>
-                <Typography component="p">
-                    About
-                </Typography>
+
                 </CardContent>
             </CardActionArea>
             <CardActions>
                 <Button variant="contained" color="primary">
-                Link to LinkedIn
+                Connect
                 </Button>
             </CardActions>
             </Card>
+            </Grid>
 
-
+            <Grid item xs={3}>
             <Card className={classes.card}>
             <CardActionArea>
                 <CardMedia
                 component="img"
                 className={classes.media}
                 height="140"
-               // image={placeholder1}
+               image={nathanial}
                 />
                 <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                    Member #4
+                 Nathanial James
                 </Typography>
-                <Typography component="p">
-                    About
-                </Typography>
+
                 </CardContent>
             </CardActionArea>
             <CardActions>
                 <Button variant="contained" color="primary">
-                Link to LinkedIn
+                Connect
                 </Button>
             </CardActions>
             </Card>
+            </Grid>
 
 
 
@@ -265,7 +271,7 @@ class Home extends Component {
                 </Paper>
 
               </Grid>
-            </Grid>
+        </Grid>
           </div>
         );
     }
