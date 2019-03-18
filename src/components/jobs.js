@@ -1,3 +1,4 @@
+import Modal from '@material-ui/core/Modal';
 import React, {Component} from "react";
 import { Typography } from "@material-ui/core";
 
@@ -16,6 +17,21 @@ import Button from '@material-ui/core/Button';
 
 import SearchBar from 'material-ui-search-bar'
 import Footer from './footer';
+import Filter from './filter';
+import fakejobs from './fake-jobs.json';
+import architect from './architect.png';
+import civil from './civil.jpg';
+import nurse from './nurse.jpeg';
+import researchers from './researchers.jpg';
+import volunteer from './volunteer.jpg';
+
+let models = fakejobs;
+let modal1 = false;
+let modal2 = false;
+let modal3 = false;
+let modal4 = false;
+let modal5 = false;
+let modal6 = false;
 
 const styles = theme => ({
     container: {
@@ -37,22 +53,29 @@ const styles = theme => ({
         color: theme.palette.text.secondary,
     },
     card_media : {
-        height: 140,
-        width: 140,
-        flex: '1 0 auto',
+        height: 200,
+        width: 350,
     },
-    details: {
-        display: 'flex',
-        flexDirection: 'column',
-        textAlign: 'left',
+    modal: {
+        position: 'absolute',
+        width: theme.spacing.unit * 50,
+        backgroundColor: theme.palette.background.paper,
+        boxShadow: theme.shadows[5],
+        padding: theme.spacing.unit * 4,
+        outline: 'none',
     },
-    description: {
-        display: 'flex',
-        flexDirection: 'column',
-        textAlign: 'right',
-    }
   });
 
+  function getModalStyle() {
+    const top = 50
+    const left = 50 
+  
+    return {
+      top: `${top}%`,
+      left: `${left}%`,
+      transform: `translate(-${top}%, -${left}%)`,
+    };
+  }
 
 class Jobs extends Component {
     render() {
@@ -71,51 +94,44 @@ class Jobs extends Component {
                         /> 
                     </Grid>
                     <Grid item xs={4}>
-                        <Paper className={classes.paper}>
-                            Sort / filter section
-                        </Paper>
+                        <Filter />
                     </Grid>
                     <Grid item xs={8}>
                         <Grid item xs={12}>
                         <Card className={classes.card}>
                         <CardActionArea>
                         <Paper className={classes.paper}>
-                        <div className={classes.details}>
                         <CardMedia
                             component="img"
-                            alt="Job Title"
+                            alt={models[0]['job-role']}
                             className={classes.card_media}
-                            height="140"
-                            image="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEzLjQ2ODc1IiB5PSIzMiIgc3R5bGU9ImZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0O2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjY0eDY0PC90ZXh0PjwvZz48L3N2Zz4="
-                            title="Job Title"
+                            image={architect}
+                            title={models[0]['job-role']}
                             />
                             <Typography gutterBottom variant="h5" component="h2">
-                                Job Title
+                                {models[0]['job-role']}
                             </Typography>
                             <Typography gutterBottom variant="subtitle1" component="h2">
-                                Location
+                                {models[0]['location']}
                             </Typography>
                             <Typography gutterBottom variant="subtitle1" component="h2">
-                                Industry
+                                {models[0]['job-type']}
                             </Typography>
                             <Typography gutterBottom variant="subtitle1" component="h2">
-                                Entry Level
+                                {models[0]['industry']}
                             </Typography>
-                        </div>
-                        <div className={classes.description}>
                         <CardContent className={classes}>
                             <Typography component="p">
-                            Job Description
+                                {models[0]['info']}
                             </Typography>
                         </CardContent>
-                        </div>
                         </Paper>
                         </CardActionArea>
                         <CardActions>
                             <Button size="small" color="primary">
                                 Read More
                             </Button>
-                            <Button size="small" color="primary">
+                            <Button size="small" href="https://www.ezega.com/Jobs/viewjobposting/52785/index/Architecture-Designer?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic" color="primary">
                                 Apply Now
                             </Button>
                         </CardActions>
@@ -125,42 +141,38 @@ class Jobs extends Component {
                         <Card className={classes.card}>
                         <CardActionArea>
                         <Paper className={classes.paper}>
-                        <div className={classes.details}>
                         <CardMedia
                             component="img"
-                            alt="Job Title"
+                            alt={models[1]['job-role']}
                             className={classes.card_media}
                             height="140"
-                            image="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEzLjQ2ODc1IiB5PSIzMiIgc3R5bGU9ImZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0O2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjY0eDY0PC90ZXh0PjwvZz48L3N2Zz4="
-                            title="Job Title"
+                            image={nurse}
+                            title={models[1]['job-role']}
                             />
                             <Typography gutterBottom variant="h5" component="h2">
-                                Job Title
+                                {models[1]['job-role']}
                             </Typography>
                             <Typography gutterBottom variant="subtitle1" component="h2">
-                                Location
+                                {models[1]['location']}
                             </Typography>
                             <Typography gutterBottom variant="subtitle1" component="h2">
-                                Industry
+                                {models[1]['job-type']}
                             </Typography>
                             <Typography gutterBottom variant="subtitle1" component="h2">
-                                Entry Level
+                                {models[1]['industry']}
                             </Typography>
-                        </div>
-                        <div className={classes.description}>
                         <CardContent className={classes}>
                             <Typography component="p">
-                            Job Description
+                                {models[1]['info']}
                             </Typography>
                         </CardContent>
-                        </div>
                         </Paper>
                         </CardActionArea>
                         <CardActions>
                             <Button size="small" color="primary">
                                 Read More
                             </Button>
-                            <Button size="small" color="primary">
+                            <Button size="small" href="https://www.linkedin.com/jobs/view/nurse-manager-at-cure-international-inc-532717317/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic" color="primary">
                                 Apply Now
                             </Button>
                         </CardActions>
@@ -170,42 +182,38 @@ class Jobs extends Component {
                         <Card className={classes.card}>
                         <CardActionArea>
                         <Paper className={classes.paper}>
-                        <div className={classes.details}>
                         <CardMedia
                             component="img"
-                            alt="Job Title"
+                            alt={models[2]['job-role']}
                             className={classes.card_media}
                             height="140"
-                            image="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEzLjQ2ODc1IiB5PSIzMiIgc3R5bGU9ImZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0O2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjY0eDY0PC90ZXh0PjwvZz48L3N2Zz4="
-                            title="Job Title"
+                            image={civil}
+                            title={models[2]['job-role']}
                             />
                             <Typography gutterBottom variant="h5" component="h2">
-                                Job Title
+                                {models[2]['job-role']}
                             </Typography>
                             <Typography gutterBottom variant="subtitle1" component="h2">
-                                Location
+                                {models[2]['location']}
                             </Typography>
                             <Typography gutterBottom variant="subtitle1" component="h2">
-                                Industry
+                                {models[2]['job-type']}
                             </Typography>
                             <Typography gutterBottom variant="subtitle1" component="h2">
-                                Entry Level
+                                {models[2]['industry']}
                             </Typography>
-                        </div>
-                        <div className={classes.description}>
                         <CardContent className={classes}>
                             <Typography component="p">
-                            Job Description
+                                {models[2]['info']}
                             </Typography>
                         </CardContent>
-                        </div>
                         </Paper>
                         </CardActionArea>
                         <CardActions>
-                            <Button size="small" color="primary">
+                            <Button size="small" conClick={this.handleOpen} olor="primary">
                                 Read More
                             </Button>
-                            <Button size="small" color="primary">
+                            <Button size="small" href="https://etcareers.com/job/10574/civil-engineer/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic" color="primary">
                                 Apply Now
                             </Button>
                         </CardActions>
@@ -215,42 +223,38 @@ class Jobs extends Component {
                         <Card className={classes.card}>
                         <CardActionArea>
                         <Paper className={classes.paper}>
-                        <div className={classes.details}>
                         <CardMedia
                             component="img"
-                            alt="Job Title"
+                            alt={models[3]['job-role']}
                             className={classes.card_media}
                             height="140"
-                            image="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEzLjQ2ODc1IiB5PSIzMiIgc3R5bGU9ImZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0O2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjY0eDY0PC90ZXh0PjwvZz48L3N2Zz4="
-                            title="Job Title"
+                            image={researchers}
+                            title={models[3]['job-role']}
                             />
                             <Typography gutterBottom variant="h5" component="h2">
-                                Job Title
+                                {models[3]['job-role']}
                             </Typography>
                             <Typography gutterBottom variant="subtitle1" component="h2">
-                                Location
+                                {models[3]['location']}
                             </Typography>
                             <Typography gutterBottom variant="subtitle1" component="h2">
-                                Industry
+                                {models[3]['job-type']}
                             </Typography>
                             <Typography gutterBottom variant="subtitle1" component="h2">
-                                Entry Level
+                                {models[3]['industry']}
                             </Typography>
-                        </div>
-                        <div className={classes.description}>
                         <CardContent className={classes}>
                             <Typography component="p">
-                            Job Description
+                                {models[3]['info']}
                             </Typography>
                         </CardContent>
-                        </div>
                         </Paper>
                         </CardActionArea>
                         <CardActions>
-                            <Button size="small" color="primary">
+                            <Button size="small" onClick={this.handleOpen} color="primary">
                                 Read More
                             </Button>
-                            <Button size="small" color="primary">
+                            <Button size="small" href="https://www.linkedin.com/jobs/view/senior-research-associate-at-laterite-1174810854/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic" color="primary">
                                 Apply Now
                             </Button>
                         </CardActions>
@@ -260,93 +264,44 @@ class Jobs extends Component {
                         <Card className={classes.card}>
                         <CardActionArea>
                         <Paper className={classes.paper}>
-                        <div className={classes.details}>
                         <CardMedia
                             component="img"
-                            alt="Job Title"
+                            alt={models[4]['job-role']}
                             className={classes.card_media}
                             height="140"
-                            image="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEzLjQ2ODc1IiB5PSIzMiIgc3R5bGU9ImZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0O2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjY0eDY0PC90ZXh0PjwvZz48L3N2Zz4="
-                            title="Job Title"
+                            image={volunteer}
+                            title={models[4]['job-role']}
                             />
                             <Typography gutterBottom variant="h5" component="h2">
-                                Job Title
+                                {models[4]['job-role']}
                             </Typography>
                             <Typography gutterBottom variant="subtitle1" component="h2">
-                                Location
+                                {models[4]['location']}
                             </Typography>
                             <Typography gutterBottom variant="subtitle1" component="h2">
-                                Industry
+                                {models[4]['job-type']}
                             </Typography>
                             <Typography gutterBottom variant="subtitle1" component="h2">
-                                Entry Level
+                                {models[4]['industry']}
                             </Typography>
-                        </div>
-                        <div className={classes.description}>
                         <CardContent className={classes}>
                             <Typography component="p">
-                            Job Description
+                                {models[4]['info']}
                             </Typography>
                         </CardContent>
-                        </div>
                         </Paper>
                         </CardActionArea>
                         <CardActions>
-                            <Button size="small" color="primary">
+                            <Button size="small" onClick={this.handleOpen} color="primary">
                                 Read More
                             </Button>
-                            <Button size="small" color="primary">
+                            <Button size="small" href="https://www.linkedin.com/jobs/view/volunteer-intern-%28monitoring%29-at-un-world-food-programme-wfp-1167252387/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"  color="primary">
                                 Apply Now
                             </Button>
                         </CardActions>
                         </Card>
                         </Grid>
-                        <Grid item xs={12}>
-                        <Card className={classes.card}>
-                        <CardActionArea>
-                        <Paper className={classes.paper}>
-                        <div className={classes.details}>
-                        <CardMedia
-                            component="img"
-                            alt="Job Title"
-                            className={classes.card_media}
-                            height="140"
-                            image="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEzLjQ2ODc1IiB5PSIzMiIgc3R5bGU9ImZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0O2RvbWluYW50LWJhc2VsaW5lOmNlbnRyYWwiPjY0eDY0PC90ZXh0PjwvZz48L3N2Zz4="
-                            title="Job Title"
-                            />
-                            <Typography gutterBottom variant="h5" component="h2">
-                                Job Title
-                            </Typography>
-                            <Typography gutterBottom variant="subtitle1" component="h2">
-                                Location
-                            </Typography>
-                            <Typography gutterBottom variant="subtitle1" component="h2">
-                                Industry
-                            </Typography>
-                            <Typography gutterBottom variant="subtitle1" component="h2">
-                                Entry Level
-                            </Typography>
-                        </div>
-                        <div className={classes.description}>
-                        <CardContent className={classes}>
-                            <Typography component="p">
-                            Job Description
-                            </Typography>
-                        </CardContent>
-                        </div>
-                        </Paper>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button size="small" color="primary">
-                                Read More
-                            </Button>
-                            <Button size="small" color="primary">
-                                Apply Now
-                            </Button>
-                        </CardActions>
-                        </Card>
                         </Grid>
-                    </Grid>
                     <Grid item xs={12}>
                         <Footer />
                     </Grid>

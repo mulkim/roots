@@ -121,11 +121,6 @@ class Home extends Component {
               </Card>
               </Grid>
               <Grid item xs={12}>
-                <Paper className={classes.paper}>
-                Featured Career News
-                </Paper>
-              </Grid>
-              <Grid item xs={12}>
                 <Footer />
               </Grid>
             </Grid>
