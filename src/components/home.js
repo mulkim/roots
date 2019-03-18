@@ -149,8 +149,9 @@ class Home extends Component {
                     </CardContent>
                 </CardActionArea>
               </Card>
-              </Grid>
-              
+              </Grid> 
+yodit-updated
+
               <Grid item xs={12}>
                 <Footer />
               </Grid>
