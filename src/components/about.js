@@ -69,7 +69,7 @@ class Home extends Component {
                 <CardMedia
                     className={classes.image_media}
                     image={placeholder1}
-                    title="Nature"
+                    title="About Us"
                     />
               </Card>
               </Grid>
@@ -78,7 +78,7 @@ class Home extends Component {
               <Grid item xs={12}>
 
                 <Paper className={classes.paper}>
-                <Typography variant="h5" component="h3">
+                <Typography variant="h2" component="h3">
                     About Roots
                     </Typography>
                     <Typography component="p">
@@ -114,6 +114,7 @@ class Home extends Component {
                     Roots helps to connect people that are looking for employment in Ethiopia with 
                     opportunities abroad. Roots makes sure every job is legitmate and providers
                     job-seekers with the tools to apply for jobs.
+
                 </Typography>
                 </CardContent>
             </CardActionArea>
@@ -157,7 +158,7 @@ class Home extends Component {
 
             <Grid item xs={12}>
             <Paper className={classes.paper}>
-                <Typography variant="h5" component="h3">
+                <Typography variant="h2" component="h3">
                     The Team
                     </Typography>
                     <Typography component="p">
@@ -174,7 +175,7 @@ class Home extends Component {
                 <CardMedia
                 component="img"
                 className={classes.media}
-                height="140"
+                height="220"
                 image={samia}
                 />
                 <CardContent>
@@ -197,7 +198,7 @@ class Home extends Component {
                 <CardMedia
                 component="img"
                 className={classes.media}
-                height="140"
+                height="220"
                 image={mustaf}
                 />
                 <CardContent>
@@ -221,7 +222,7 @@ class Home extends Component {
                 <CardMedia
                 component="img"
                 className={classes.media}
-                height="140"
+                height="220"
                 image={rahel}
                 />
                 <CardContent>
@@ -245,7 +246,7 @@ class Home extends Component {
                 <CardMedia
                 component="img"
                 className={classes.media}
-                height="140"
+                height="220"
                image={nathanial}
                 />
                 <CardContent>

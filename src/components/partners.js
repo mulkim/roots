@@ -50,7 +50,7 @@ const styles = theme => ({
         maxWidth: 1600,
     },
     media: {
-        height: 650,
+        height: 450,
     },
     card_media: {
         height: 325,
@@ -78,7 +78,7 @@ class Home extends Component {
               <Grid item xs={12}>
 
                 <Paper className={classes.paper}>
-                <Typography variant="h5" component="h3">
+                <Typography variant="h2" component="h3">
                     Learn how to Become a Partner
                     </Typography>
                     <Typography component="p">
@@ -98,7 +98,7 @@ class Home extends Component {
               <Grid item xs={12}>
 
                 <Paper className={classes.paper}>
-                <Typography variant="h5" component="h3">
+                <Typography variant="h2" component="h3">
                     Partner Testimonies
                     </Typography>
                     <Typography component="p">
@@ -170,7 +170,7 @@ class Home extends Component {
             <Grid item xs={12}>
 
                 <Paper className={classes.paper}>
-                <Typography variant="h5" component="h3">
+                <Typography variant="h2" component="h3">
                     Job Seeker Testimonies
                     </Typography>
                     <Typography component="p">

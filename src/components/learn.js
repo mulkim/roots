@@ -46,7 +46,7 @@ const styles = theme => ({
         maxWidth: 1600,
     },
     media: {
-        height: 650,
+        height: 510,
     },
     card_media : {
         height: 425,
@@ -73,7 +73,7 @@ class Home extends Component {
               <Grid item xs={12}>
 
                 <Paper className={classes.paper}>
-                <Typography variant="h5" component="h3">
+                <Typography variant="h2" component="h3">
                     Learn About Ethiopia 
                     </Typography>
                     <Typography component="p">

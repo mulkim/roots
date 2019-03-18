@@ -44,7 +44,7 @@ const styles = theme => ({
         maxWidth: 1600,
     },
     image_media: {
-        height: 400,
+        height: 620,
     },
     card_media : {
         height: 325,
@@ -86,8 +86,8 @@ class Home extends Component {
                 <CardActionArea>
                 <CardMedia
                     className={classes.card_media}
-                    image={learn}
-                    title="Learn"
+                    image={apply}
+                    title="Apply"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
@@ -132,8 +132,8 @@ class Home extends Component {
                 <CardActionArea>
                 <CardMedia
                     className={classes.card_media}
-                    image={apply}
-                    
+                    image={learn}
+                    title="Learn"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
@@ -150,8 +150,6 @@ class Home extends Component {
                 </CardActionArea>
               </Card>
               </Grid> 
-yodit-updated
-
               <Grid item xs={12}>
                 <Footer />
               </Grid>
