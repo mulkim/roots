@@ -14,7 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
 import '../styles/global.css';
-import placeholder1 from './teams.png';
+import placeholder1 from './parts.jpg';
 
 
 const styles = theme => ({
@@ -79,192 +79,41 @@ class Home extends Component {
 
               </Grid>
 
-              <Grid item xs={12}>
-
-                <Paper className={classes.paper}>
-                <Typography variant="h5" component="h3">
-                    Benefits
-                    </Typography>
-                    <Typography component="p">
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                 </Typography>
-                </Paper> 
-
-              </Grid>
-
-            
-            <Card className={classes.card}>
-            <CardActionArea>
-                <CardMedia
-                component="img"
-                className={classes.media}
-                height="40"
-               // image={placeholder1}
-                />
-                <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                    Benefit 1
-                </Typography>
-                <Typography component="p">
-                    BENEFITS
-                    BENEFITS
-                    BENEFITS
-                    BENEFITS
-                </Typography>
-                </CardContent>
-            </CardActionArea>
-            </Card>
-
-            <Card className={classes.card}>
-            <CardActionArea>
-                <CardMedia
-                component="img"
-                className={classes.media}
-                height="140"
-               // image={placeholder1}
-                />
-                <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                   Benefit 2
-                </Typography>
-                <Typography component="p">
-                    BENEFITS
-                    BENEFITS
-                    BENEFITS
-                    BENEFITS
-                </Typography>
-                </CardContent>
-            </CardActionArea>
-            </Card>
-
-            <Card className={classes.card}>
-            <CardActionArea>
-                <CardMedia
-                component="img"
-                className={classes.media}
-                height="140"
-               // image={placeholder1}
-                />
-                <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                   Benefit 3
-                </Typography>
-                <Typography component="p">
-                    BENEFITS
-                    BENEFITS
-                    BENEFITS
-                    BENEFITS
-                </Typography>
-                </CardContent>
-            </CardActionArea>
-            </Card>
-            
-
 
             <Grid item xs={12}>
             <Paper className={classes.paper}>
                 <Typography variant="h5" component="h3">
-                    Testimonies
+                “Our highest hiring percentage comes from Roots job site. We always get the highest volume of qualified applications for our positions with Roots” - ArchitectWorks  
                     </Typography>
-                    <Typography component="p">
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                 </Typography>
                 </Paper> 
             </Grid>
 
-            <Card className={classes.card}>
-            <CardActionArea>
-            <CardMedia
-            component="img"
-            className={classes.media}
-            height="40"
-            // image={placeholder1}
-            />
-            <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-                Testimony 1
-            </Typography>
-            <Typography component="p">
-                BENEFITS
-                BENEFITS
-                BENEFITS
-                BENEFITS
-            </Typography>
-            </CardContent>
-            </CardActionArea>
-            </Card>
-
-            <Card className={classes.card}>
-            <CardActionArea>
-            <CardMedia
-            component="img"
-            className={classes.media}
-            height="140"
-            // image={placeholder1}
-            />
-            <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-                Testimony 2
-            </Typography>
-            <Typography component="p">
-                BENEFITS
-                BENEFITS
-                BENEFITS
-                BENEFITS
-            </Typography>
-            </CardContent>
-            </CardActionArea>
-            </Card>
-
-            <Card className={classes.card}>
-            <CardActionArea>
-            <CardMedia
-            component="img"
-            className={classes.media}
-            height="140"
-            // image={placeholder1}
-            />
-            <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-                Testionomy 3
-            </Typography>
-            <Typography component="p">
-                BENEFITS
-                BENEFITS
-                BENEFITS
-                BENEFITS
-            </Typography>
-            </CardContent>
-            </CardActionArea>
-            </Card>
-
-
+            <Grid item xs={12}>
+            <Paper className={classes.paper}>
+                <Typography variant="h5" component="h3">
+                “We’re proud to be associated with Roots for over seven years! Roots mission aligns to our own and has led us to hire individuals around the world.“ - General Hospitals 
+                    </Typography>
+                </Paper> 
+            </Grid>
 
             <Grid item xs={12}>
             <Paper className={classes.paper}>
+                <Typography variant="h5" component="h3">
+                “Roots has helped us find intelligent remote talent that drives success within our business!" - AfricaHopes Inc. 
+                    </Typography>
+                </Paper> 
+            </Grid>            
+
+            
+            <Grid item xs={12}>
+            <Paper className={classes.paper}>
             <Typography variant="h5" component="h3">
-                Post a Job Now
+                Partner with Roots to utilize our Network 
                 </Typography>
                 <Typography component="p">
-                Insert Content
-                Insert Content
-                Insert Content
-                Insert Content
-                Insert Content
-                Insert Content
             </Typography>
             <Button variant="contained" color="primary" className={classes.button}>
-                Post
+                Submit a Job Now
             </Button>
             </Paper> 
             </Grid>
