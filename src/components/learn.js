@@ -64,7 +64,7 @@ class Home extends Component {
                 <CardMedia
                     className={classes.media}
                     image={placeholder1}
-                    title="Nature"
+                    title="Ethiopia"
                     />
               </Card>
               </Grid>
@@ -98,9 +98,9 @@ class Home extends Component {
                            About
                         </Typography>
                         <Typography component="p">
-                        Ethiopia is proud to be one of the only countries in Africa that escaped colonization. The area of Ethiopia is 1,104,300 sq. km, which makes it approximately as big as France and Spain combined. The capital of Ethiopia is Addis Ababa, which means "new flower" in Amharic. 
+                        Ethiopia is proud to be one of the only countries in Africa that has escaped colonization. The area of Ethiopia is 1,104,300 sq. kilometers, which makes it approximately as big as France and Spain combined. The capital of Ethiopia is Addis Ababa, which means "new flower" in Amharic. 
 
-                        The total area of Ethiopia is approximately five times the size of the UK and just less than twice the size of Texas.
+                        The total area of Ethiopia is approximately five times the size of the United Kingdom and is also just less than twice the size of the state of Texas.
 
                         </Typography>
                         <Button variant="contained" color="primary" className={classes.button} a href= "https://www.linkedin.com/pulse/some-important-facts-ethiopia-teaching-faculty-vinay-kumar-mekala/">
@@ -149,7 +149,7 @@ class Home extends Component {
                             Safety
                         </Typography>
                         <Typography component="p">
-                        According to linkedin, Ethiopia is one of the safest countries in African region.The average temperature in the Highlands of Ethiopia is around 20 degrees centigrade.
+                        According to LinkedIn, Ethiopia is amongst one of the safest countries to travel and live in the African region. Regarding weather, the average temperature in the Highlands of Ethiopia is approximately 20 degrees centigrade.
                         </Typography>
                         <Button variant="contained" color="primary" className={classes.button} a href= "https://www.linkedin.com/pulse/some-important-facts-ethiopia-teaching-faculty-vinay-kumar-mekala/">
                         Read More
