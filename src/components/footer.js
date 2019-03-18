@@ -78,14 +78,14 @@ function Footer(props) {
           </Grid>
           <Grid item xs={8} sm={4} md={2}>
             <Typography variant="h6" marked="left" gutterBottom>
-              Get Social
+              Stay Connected
             </Typography>
             <ul className={classes.list}>
               <li className={classes.listItem}>
-                <Link href="/premium-themes/onepirate/terms">Facebook</Link>
+                Instagram: @ProjectRoots
               </li>
               <li className={classes.listItem}>
-                <Link href="/premium-themes/onepirate/privacy">Twitter</Link>
+                Twitter: @ProjectRoots
               </li>
             </ul>
           </Grid>
@@ -95,10 +95,10 @@ function Footer(props) {
             </Typography>
             <ul className={classes.list}>
               <li className={classes.listItem}>
-                <Link href="/premium-themes/onepirate/terms">Terms</Link>
+                1851 NE Grant Ln
               </li>
               <li className={classes.listItem}>
-                <Link href="/premium-themes/onepirate/privacy">Privacy</Link>
+                Seattle, WA 98195
               </li>
             </ul>
           </Grid>
