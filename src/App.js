@@ -9,7 +9,6 @@ import Partners from "./components/partners";
 import Learn from "./components/learn";
 import Contact from "./components/contact";
 import Error from "./components/error";
-import Navigation from "./components/navigation";
 import RootsToolbar from "./components/toolbar";
 
 import './App.css';
@@ -28,7 +27,6 @@ class App extends Component {
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <div className="fillParent">
             <RootsToolbar/>
-            <Navigation />
             <div className={classes.toolbar} />
             <Switch>
             <Route path="/" component={Home} exact/>
