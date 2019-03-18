@@ -103,7 +103,7 @@ class Home extends Component {
                 <CardMedia
                 component="img"
                 className={classes.card_media}
-                height="40"
+                height="140"
                 image={job_app}
                 />
                 <CardContent>
@@ -111,10 +111,10 @@ class Home extends Component {
                     Looking for a Job?
                 </Typography>
                 <Typography component="p">
-                    Roots helps to connect people that are looking for employment in Ethiopia with 
-                    opportunities abroad. Roots makes sure every job is legitmate and providers
-                    job-seekers with the tools to apply for jobs.
-
+                    Roots is created to connect people that are looking for employment in Ethiopia with 
+                    opportunities abroad. Roots makes sure that every job is legitmate and provides
+                    the job-seekers with the tools to seamlessly and accurately apply for jobs.
+                    {'\n'}
                 </Typography>
                 </CardContent>
             </CardActionArea>
