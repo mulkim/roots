@@ -15,6 +15,8 @@ import Button from '@material-ui/core/Button';
 
 import '../styles/global.css';
 import placeholder1 from './teams.png';
+import Footer from './footer';
+import map from './map.JPG';
 
 
 const styles = theme => ({
@@ -40,8 +42,8 @@ const styles = theme => ({
         maxWidth: 1600,
     },
     media: {
-        height: 650,
-    }
+        height: 450,
+    }  
   });
 
 class Home extends Component {
@@ -54,7 +56,7 @@ class Home extends Component {
               <Card className={classes.card}>
                 <CardMedia
                     className={classes.media}
-                    image={placeholder1}
+                    image={map}
                     title="Nature"
                     />
               </Card>
@@ -68,15 +70,77 @@ class Home extends Component {
                     Get in Contact With Us
                     </Typography>
                     <Typography component="p">
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
+                    Feel free to reach out by email, mail or phone number. We respond to all inquires within 48 hours.
                  </Typography>
                 </Paper> 
 
+              </Grid>
+
+
+              <Grid item xs={4}>
+              <Card className={classes.card}>
+                <CardActionArea>
+                <CardMedia
+                    className={classes.card_media}
+                    image=''
+                    title="Learn"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                           Email
+                        </Typography>
+                        <Typography component="p">
+                        contact@roots.org
+          
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+              </Card>
+              </Grid>
+
+              <Grid item xs={4}>
+              <Card className={classes.card}>
+                <CardActionArea>
+                <CardMedia
+                    className={classes.card_media}
+                    image=''
+                    title="Learn"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                           Mail
+                        </Typography>
+                        <Typography component="p">
+                        1851 NE Grant Ln
+                        Seattle, WA 98195
+
+          
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+              </Card>
+              </Grid>
+
+              <Grid item xs={4}>
+              <Card className={classes.card}>
+                <CardActionArea>
+                <CardMedia
+                    className={classes.card_media}
+                    image=''
+                    title="Learn"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                           Phone Number
+                        </Typography>
+                        <Typography component="p">
+                        (206) 111-111
+
+          
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+              </Card>
               </Grid>
 
             
@@ -85,12 +149,9 @@ class Home extends Component {
 
 
               <Grid item xs={12}>
-
-                <Paper className={classes.paper}>
-                Footer
-                </Paper>
-
+                <Footer />
               </Grid>
+           
             </Grid>
           </div>
         );
