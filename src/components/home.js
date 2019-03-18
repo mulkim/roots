@@ -12,7 +12,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
 import '../styles/global.css';
-import placeholder from './Nature.jpg';
+import placeholder from './capetown.jpg';
+import Footer from './footer';
 
 const styles = theme => ({
     container: {
@@ -36,8 +37,11 @@ const styles = theme => ({
     card: {
         maxWidth: 1600,
     },
-    media: {
-        height: 650,
+    image_media: {
+        height: 600,
+    },
+    card_media : {
+        height: 325,
     }
   });
 
@@ -46,13 +50,13 @@ class Home extends Component {
         const {classes} = this.props;
         return (
         <div className={classNames('fillParent', classes.container, classes.root)}>
-            <Grid container spacing={36}>
+            <Grid container spacing={34}>
               <Grid item xs={12}>
               <Card className={classes.card}>
                 <CardMedia
-                    className={classes.media}
+                    className={classes.image_media}
                     image={placeholder}
-                    title="Nature"
+                    title="Ghana's Business Center"
                     />
               </Card>
               </Grid>
@@ -60,7 +64,7 @@ class Home extends Component {
               <Card className={classes.card}>
                 <CardActionArea>
                 <CardMedia
-                    className={classes.media}
+                    className={classes.card_media}
                     image=''
                     title="Learn"
                     />
@@ -80,7 +84,7 @@ class Home extends Component {
               <Card className={classes.card}>
                 <CardActionArea>
                 <CardMedia
-                    className={classes.media}
+                    className={classes.card_media}
                     image=''
                     title="Connect"
                     />
@@ -100,7 +104,7 @@ class Home extends Component {
               <Card className={classes.card}>
                 <CardActionArea>
                 <CardMedia
-                    className={classes.media}
+                    className={classes.card_media}
                     image=''
                     title="Apply"
                     />
@@ -122,9 +126,7 @@ class Home extends Component {
                 </Paper>
               </Grid>
               <Grid item xs={12}>
-                <Paper className={classes.paper}>
-                Footer
-                </Paper>
+                <Footer />
               </Grid>
             </Grid>
           </div>
