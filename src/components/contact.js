@@ -42,7 +42,7 @@ const styles = theme => ({
         maxWidth: 1600,
     },
     media: {
-        height: 450,
+        height: 425,
     }  
   });
 
@@ -57,7 +57,7 @@ class Home extends Component {
                 <CardMedia
                     className={classes.media}
                     image={map}
-                    title="Nature"
+                    title="Contact"
                     />
               </Card>
               </Grid>
@@ -66,7 +66,7 @@ class Home extends Component {
               <Grid item xs={12}>
 
                 <Paper className={classes.paper}>
-                <Typography variant="h5" component="h3">
+                <Typography variant="h2" component="h3">
                     Get in Contact With Us
                     </Typography>
                     <Typography component="p">
