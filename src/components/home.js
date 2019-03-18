@@ -12,8 +12,14 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
 import '../styles/global.css';
-import placeholder from './capetown.jpg';
+import placeholder from './capetown.png';
 import Footer from './footer';
+
+import learn from './learn.JPG';
+import connect from './connect.JPG';
+import apply from './apply.jpg';
+
+import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
     container: {
@@ -38,7 +44,7 @@ const styles = theme => ({
         maxWidth: 1600,
     },
     image_media: {
-        height: 600,
+        height: 400,
     },
     card_media : {
         height: 325,
@@ -60,23 +66,41 @@ class Home extends Component {
                     />
               </Card>
               </Grid>
+
+              <Grid item xs={12}>
+
+                <Paper className={classes.paper}>
+                <Typography variant="h5" component="h3">
+                    <ln></ln>
+                    </Typography>
+                    <Typography component="p">
+                    <ln></ln>
+                 </Typography>
+                
+                </Paper> 
+
+              </Grid>
+
               <Grid item xs={4}>
               <Card className={classes.card}>
                 <CardActionArea>
                 <CardMedia
                     className={classes.card_media}
-                    image=''
+                    image={learn}
                     title="Learn"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
-                            Learn
+                            Apply
                         </Typography>
                         <Typography component="p">
-                            Learn about all the different career opportunities you could explore
-                            across the continent!
+                        Find a well-paying job in any field of work or
+                            seek grants and relocation offers.
                         </Typography>
                     </CardContent>
+                    <Button variant="contained" color="primary" a href= "./jobs">
+                    Find a Job Today
+                    </Button>
                 </CardActionArea>
               </Card>
               </Grid>
@@ -85,7 +109,7 @@ class Home extends Component {
                 <CardActionArea>
                 <CardMedia
                     className={classes.card_media}
-                    image=''
+                    image={connect}
                     title="Connect"
                     />
                     <CardContent>
@@ -93,9 +117,12 @@ class Home extends Component {
                             Connect
                         </Typography>
                         <Typography component="p">
-                            Strengthen the connection between fellow job seekers and our 
-                            Africa's top companies through the ROOTS community.
+                            Strengthen the connection between fellow job seekers and 
+                            Ethiopia's companies through the ROOTS community.
                         </Typography>
+                        <Button variant="contained" color="primary" a href= "./partners">
+                Partner with Us
+                </Button>
                     </CardContent>
                 </CardActionArea>
               </Card>
@@ -105,26 +132,25 @@ class Home extends Component {
                 <CardActionArea>
                 <CardMedia
                     className={classes.card_media}
-                    image=''
-                    title="Apply"
+                    image={apply}
+                    
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
-                            Apply
+                            Learn
                         </Typography>
                         <Typography component="p">
-                            Find a well-paying job in any field of work or
-                            seek grants and relocation offers.
+                            Learn more about about the culture of Ethiopia to help you
+                            relocate to the country
                         </Typography>
+                        <Button variant="contained" color="primary" a href= "./learn">
+                        Learn
+                        </Button>
                     </CardContent>
                 </CardActionArea>
               </Card>
               </Grid>
-              <Grid item xs={12}>
-                <Paper className={classes.paper}>
-                Featured Career News
-                </Paper>
-              </Grid>
+              
               <Grid item xs={12}>
                 <Footer />
               </Grid>

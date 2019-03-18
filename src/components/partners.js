@@ -16,6 +16,16 @@ import Button from '@material-ui/core/Button';
 import '../styles/global.css';
 import placeholder1 from './parts.jpg';
 
+import ah from './ah.png';
+import gh from './gh.png';
+import ms from './ms.jpg';
+import { AvHd } from "material-ui/svg-icons";
+
+import engineer from './engineer.jpg';
+import nurse from './nurse.jpg';
+import at from './att.jpg';
+import Footer from './footer';
+
 
 const styles = theme => ({
     container: {
@@ -41,7 +51,11 @@ const styles = theme => ({
     },
     media: {
         height: 650,
-    }
+    },
+    card_media: {
+        height: 325,
+        maxWidth: 1600,
+    },
   });
 
 class Home extends Component {
@@ -68,65 +82,166 @@ class Home extends Component {
                     Learn how to Become a Partner
                     </Typography>
                     <Typography component="p">
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
+                    Partnering with Roots helps your organization find talented job applicants from around the world. We found that talented job seekers struggled
+                    to find job opportunities abroad. They were struggling to connect with companies abroad and find legitmate opportunities that were not just spam
+                    job postings. If your company partners with us, then you can post your job description and have acess to our talent network. Job seekers 
+                    will be assured your company is a great place to work. We also help you tailor your job description to attract international talent.
+                 </Typography>
+                 <Button variant="contained" color="primary" className={classes.button} a href= "https://goo.gl/forms/zbdD2WHdQg0E9qx03">
+                        Post your Job Now
+                </Button>
+                </Paper> 
+
+              </Grid>
+
+
+              <Grid item xs={12}>
+
+                <Paper className={classes.paper}>
+                <Typography variant="h5" component="h3">
+                    Partner Testimonies
+                    </Typography>
+                    <Typography component="p">
+                    Here are just some of our partner employers that used Roots to fill their vacant positions
                  </Typography>
                 </Paper> 
 
               </Grid>
 
+              <Grid item xs={4}>
+              <Card className={classes.card}>
+                <CardActionArea>
+                <CardMedia
+                    className={classes.card_media}
+                    image={ah}
+                    title="Learn"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                           Alfa Inc
+                        </Typography>
+                        <Typography component="p">
+                        “Before we became a Roots Partner, it would take us months to fill our job roles. Roots has helped us find intelligent remote talent that drives success within our business!"
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+              </Card>
+              </Grid>
+              <Grid item xs={4}>
+              <Card className={classes.card}>
+                <CardActionArea>
+                <CardMedia
+                    className={classes.card_media}
+                    image= {gh}
+                    title="Connect"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            Green Stripe
+                        </Typography>
+                        <Typography component="p">
+                        “We’re proud to be associated with Roots for over seven years! Roots mission aligns to our own and has led us to hire individuals around the world.“
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+              </Card>
+              </Grid>
+              <Grid item xs={4}>
+              <Card className={classes.card}>
+                <CardActionArea>
+                <CardMedia
+                    className={classes.card_media}
+                    image={ms}
+                    title="Apply"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            KP Capital
+                        </Typography>
+                        <Typography component="p">
+                        "Our highest hiring percentage comes from Roots job site. We always get the highest volume of qualified applications for our positions with Roots” 
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+              </Card>
+              </Grid>
 
+        
             <Grid item xs={12}>
-            <Paper className={classes.paper}>
-                <Typography variant="h5" component="h3">
-                “Our highest hiring percentage comes from Roots job site. We always get the highest volume of qualified applications for our positions with Roots” - ArchitectWorks  
-                    </Typography>
-                </Paper> 
-            </Grid>
-
-            <Grid item xs={12}>
-            <Paper className={classes.paper}>
-                <Typography variant="h5" component="h3">
-                “We’re proud to be associated with Roots for over seven years! Roots mission aligns to our own and has led us to hire individuals around the world.“ - General Hospitals 
-                    </Typography>
-                </Paper> 
-            </Grid>
-
-            <Grid item xs={12}>
-            <Paper className={classes.paper}>
-                <Typography variant="h5" component="h3">
-                “Roots has helped us find intelligent remote talent that drives success within our business!" - AfricaHopes Inc. 
-                    </Typography>
-                </Paper> 
-            </Grid>            
-
-            
-            <Grid item xs={12}>
-            <Paper className={classes.paper}>
-            <Typography variant="h5" component="h3">
-                Partner with Roots to utilize our Network 
-                </Typography>
-                <Typography component="p">
-            </Typography>
-            <Button variant="contained" color="primary" className={classes.button}>
-                Submit a Job Now
-            </Button>
-            </Paper> 
-            </Grid>
-
-
-
-          <Grid item xs={12}>
 
                 <Paper className={classes.paper}>
-                Footer
-                </Paper>
+                <Typography variant="h5" component="h3">
+                    Job Seeker Testimonies
+                    </Typography>
+                    <Typography component="p">
+                    Here from some of the talented youth that used Roots to secure their job
+                </Typography>
+                </Paper> 
 
-              </Grid>
+                </Grid>
+
+                <Grid item xs={4}>
+                <Card className={classes.card}>
+                <CardActionArea>
+                <CardMedia
+                    className={classes.card_media}
+                    image={engineer}
+                    title="Learn"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            Dave B, Electrical Engineer
+                        </Typography>
+                        <Typography component="p">
+                        “ Roots has allowed me to find a job that I love doing in a country that I would have never imagined living in. To know that the work I am doing makes a direct impact on individuals in African villages is a life changing experience. “
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+                </Card>
+                </Grid>
+                <Grid item xs={4}>
+                <Card className={classes.card}>
+                <CardActionArea>
+                <CardMedia
+                    className={classes.card_media}
+                    image={nurse}
+                    title="Connect"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            Rahel G, Registered Nurse
+                        </Typography>
+                        <Typography component="p">
+                        “ Roots site has prepared me with the necessary resources that I needed to know before relocating to Ethiopia. I strongly advise that anyone interested in learning about how this process works, refer to Roots site.“ 
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+                </Card>
+                </Grid>
+                <Grid item xs={4}>
+                <Card className={classes.card}>
+                <CardActionArea>
+                <CardMedia
+                    className={classes.card_media}
+                    image={at}
+                    title="Apply"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            Mike M, Attorney
+                        </Typography>
+                        <Typography component="p">
+                        “ Since joining my company almost five years ago, I’ve learned so many new things within my field of study. I will always be thankful to Roots job site for connecting me with a company that continues to push me to grow, not only within the company but also as a person “ 
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+                </Card>
+                </Grid>
+
+
+                <Grid item xs={12}>
+                    <Footer />
+                </Grid>
             </Grid>
           </div>
         );

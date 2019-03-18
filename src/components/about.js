@@ -22,6 +22,7 @@ import mustaf from './mustaf.jpg';
 import nathanial from './nathanial.JPG';
 import rahel from './Rahel.jpg';
 import samia from './Samia.jpg';
+import Footer from './footer';
 
 
 const styles = theme => ({
@@ -117,7 +118,7 @@ class Home extends Component {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button variant="contained" color="primary">
+                <Button variant="contained" color="primary" a href= "./jobs">
                 Find a Job Today
                 </Button>
             </CardActions>
@@ -145,7 +146,7 @@ class Home extends Component {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button variant="contained" color="primary">
+                <Button variant="contained" color="primary" a href= "./partners">
                 Post
                 </Button>
             </CardActions>
@@ -183,7 +184,7 @@ class Home extends Component {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button variant="contained" color="primary">
+                <Button variant="contained" color="primary" a href = "https://www.linkedin.com/">
                 Connect
                 </Button>
             </CardActions>
@@ -200,13 +201,13 @@ class Home extends Component {
                 image={mustaf}
                 />
                 <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography gutterBottom variant="h5" component="h2" >
                 Mustaf Ali
                 </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button variant="contained" color="primary">
+                <Button variant="contained" color="primary" a href = "https://www.linkedin.com/">
                 Connect
                 </Button>
             </CardActions>
@@ -224,14 +225,14 @@ class Home extends Component {
                 image={rahel}
                 />
                 <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography gutterBottom variant="h5" component="h2" a href = "https://www.linkedin.com/">
                 Rahel Tesfay
                 </Typography>
 
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button variant="contained" color="primary">
+                <Button variant="contained" color="primary" a href = "https://www.linkedin.com/">
                 Connect
                 </Button>
             </CardActions>
@@ -255,7 +256,7 @@ class Home extends Component {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button variant="contained" color="primary">
+                <Button variant="contained" color="primary" a href = "https://www.linkedin.com/">
                 Connect
                 </Button>
             </CardActions>
@@ -264,12 +265,8 @@ class Home extends Component {
 
 
 
-              <Grid item xs={12}>
-
-                <Paper className={classes.paper}>
-                Footer
-                </Paper>
-
+            <Grid item xs={12}>
+                <Footer />
               </Grid>
         </Grid>
           </div>

@@ -14,7 +14,13 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
 import '../styles/global.css';
-import placeholder1 from './teams.png';
+import placeholder1 from './ethiopia.jpeg';
+import Footer from './footer';
+
+import ethio from './ethio.jpg';
+import injera from './injera.jpg';
+import air from './air.jpg';
+import add from './add.jpg';
 
 
 const styles = theme => ({
@@ -41,6 +47,9 @@ const styles = theme => ({
     },
     media: {
         height: 650,
+    },
+    card_media : {
+        height: 425,
     }
   });
 
@@ -68,127 +77,125 @@ class Home extends Component {
                     Learn About Ethiopia 
                     </Typography>
                     <Typography component="p">
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
-                    Insert Content
+                    Ethiopia is a diverse country in East Africa. Part of taking a job in Ethiopia, means getting accostumed to the culture. Here is our 
+                    quick guide to understanding the country.
                  </Typography>
                 </Paper> 
 
               </Grid>
 
+
+              <Grid item xs={4}>
+              <Card className={classes.card}>
+                <CardActionArea>
+                <CardMedia
+                    className={classes.card_media}
+                    image={ethio}
+                    title="Learn"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                           About
+                        </Typography>
+                        <Typography component="p">
+                        Ethiopia is proud to be one of the only countries in Africa that escaped colonization. The area of Ethiopia is 1,104,300 sq. km, which makes it approximately as big as France and Spain combined. The capital of Ethiopia is Addis Ababa, which means "new flower" in Amharic. 
+
+                        The total area of Ethiopia is approximately five times the size of the UK and just less than twice the size of Texas.
+
+                        </Typography>
+                        <Button variant="contained" color="primary" className={classes.button} a href= "https://www.linkedin.com/pulse/some-important-facts-ethiopia-teaching-faculty-vinay-kumar-mekala/">
+                        Read More
+                </Button>
+                    </CardContent>
+                </CardActionArea>
+              </Card>
+              </Grid>
+              <Grid item xs={8}>
+              <Card className={classes.card}>
+                <CardActionArea>
+                <CardMedia
+                    className={classes.card_media}
+                    image= {injera}
+                    title="Connect"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                        Culture
+                        </Typography>
+                        <Typography component="p">
+                        Food is also pivotal to the Ethiopian lifestyle, whether it be the focal point of a communal gathering or the daily challenge to obtain enough food to be comfortable.
+                        There is a unique menu of food and drink which makes the most of sometimes scarce resources. Likewise, transport is a pragmatic mixture of the mechanical and the animal which often makes for an interesting spectacle on the street!
+                        Music, dance and imagery are everywhere. The churches are filled with a special brand of picturesque images of colour and tradition, while itinerant musicians can be found in every town and village, lightening the mood and providing accompaniment for energetic dances.
+                        No matter how urban or rural the community, the people dress with style and pride in their white or embroidered wraps, contrasting with the opulent colours worn by the priests in their long robes holding sparkling umbrellas
+
+                        </Typography>
+                        <Button variant="contained" color="primary" className={classes.button} a href= "https://www.linkedin.com/pulse/some-important-facts-ethiopia-teaching-faculty-vinay-kumar-mekala/">
+                        Read More
+                </Button>
+                    </CardContent>
+                </CardActionArea>
+              </Card>
+              </Grid>
+              <Grid item xs={4}>
+              <Card className={classes.card}>
+                <CardActionArea>
+                <CardMedia
+                    className={classes.card_media}
+                    image={air}
+                    title="Apply"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            Safety
+                        </Typography>
+                        <Typography component="p">
+                        According to linkedin, Ethiopia is one of the safest countries in African region.The average temperature in the Highlands of Ethiopia is around 20 degrees centigrade.
+                        </Typography>
+                        <Button variant="contained" color="primary" className={classes.button} a href= "https://www.linkedin.com/pulse/some-important-facts-ethiopia-teaching-faculty-vinay-kumar-mekala/">
+                        Read More
+                </Button>
+                    </CardContent>
+                </CardActionArea>
+              </Card>
+              </Grid>
+
+
+              <Grid item xs={8}>
+              <Card className={classes.card}>
+                <CardActionArea>
+                <CardMedia
+                    className={classes.card_media}
+                    image={add}
+                    title="Learn"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                           Passport 
+                        </Typography>
+                        <Typography component="p">
+                        A valid passport and visa are required for entry to Ethiopia. Be sure to get your passport before arriving in Ethiopia to avoid any potential problems.
+                        It’s recommended that you enroll in STEP, the Smart Traveler Enrollment Program, with the U.S. Department of State. It’s a free program that will offer you information from the Embassy on safety conditions, help the U.S. Embassy contact you in an emergency, and help your family and friends get in touch with you in the case of an emergency.
+                        </Typography>
+                        <Button variant="contained" color="primary" className={classes.button} a href= "https://www.linkedin.com/pulse/some-important-facts-ethiopia-teaching-faculty-vinay-kumar-mekala/">
+                        Read More
+                </Button>
+                    </CardContent>
+                </CardActionArea>
+              </Card>
+              </Grid>
+
+
+
             
             
-            <Card className={classes.card}>
-            <CardActionArea>
-                <CardMedia
-                component="img"
-                className={classes.media}
-                height="140"
-                //image={placeholder1}
-                />
-                <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                    Culture
-                </Typography>
-                <Typography component="p">
-                    About
-                </Typography>
-                </CardContent>
-            </CardActionArea>
-            <CardActions>
-                <Button variant="contained" color="primary">
-                More Info
-                </Button>
-            </CardActions>
-            </Card>
-
-            <Card className={classes.card}>
-            <CardActionArea>
-                <CardMedia
-                component="img"
-                className={classes.media}
-                height="140"
-                //image={placeholder1}
-                />
-                <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                    Vaccines
-                </Typography>
-                <Typography component="p">
-                    About
-                </Typography>
-                </CardContent>
-            </CardActionArea>
-            <CardActions>
-                <Button variant="contained" color="primary">
-                More Info
-                </Button>
-            </CardActions>
-            </Card>
-
-
-            <Card className={classes.card}>
-            <CardActionArea>
-                <CardMedia
-                component="img"
-                className={classes.media}
-                height="140"
-                //image={placeholder1}
-                />
-                <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                    Packing
-                </Typography>
-                <Typography component="p">
-                    About
-                </Typography>
-                </CardContent>
-            </CardActionArea>
-            <CardActions>
-                <Button variant="contained" color="primary">
-                More Info
-                </Button>
-            </CardActions>
-            </Card>
-
-
-            <Card className={classes.card}>
-            <CardActionArea>
-                <CardMedia
-                component="img"
-                className={classes.media}
-                height="140"
-               // image={placeholder1}
-                />
-                <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                    Language
-                </Typography>
-                <Typography component="p">
-                    About
-                </Typography>
-                </CardContent>
-            </CardActionArea>
-            <CardActions>
-                <Button variant="contained" color="primary">
-                More Info
-                </Button>
-            </CardActions>
-            </Card>
-
+            
 
 
               <Grid item xs={12}>
-
-                <Paper className={classes.paper}>
-                Footer
-                </Paper>
-
-              </Grid>
+                    <Footer />
+                </Grid>
             </Grid>
+           
           </div>
         );
     }
