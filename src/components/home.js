@@ -45,6 +45,7 @@ const styles = theme => ({
     },
     image_media: {
         height: 620,
+        maxWidth: 1600,
     },
     card_media : {
         height: 325,
