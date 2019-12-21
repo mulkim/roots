@@ -47,7 +47,7 @@ const styles = theme => ({
         height: 620,
     },
     card_media : {
-        
+        height: 325,
     }
   });
 
@@ -56,29 +56,26 @@ class Home extends Component {
         const {classes} = this.props;
         return (
         <div className={classNames('fillParent', classes.container, classes.root)}>
-            <Grid container spacing={34}>
+            <Grid container spacing={2}>
               <Grid item xs={12}>
-              <Card className={classes.card}>
-                <CardMedia
-                    className={classes.image_media}
-                    image={placeholder}
-                    title="Ghana's Business Center"
+                <Card className={classes.card}>
+                    <CardMedia
+                        className={classes.image_media}
+                        image={placeholder}
+                        title="Ghana's Business Center"
                     />
-              </Card>
+                </Card>
               </Grid>
 
               <Grid item xs={12}>
-
                 <Paper className={classes.paper}>
-                <Typography variant="h5" component="h3">
-                    <ln></ln>
+                    <Typography variant="h5" component="h3">
+                        <ln></ln>
+                        </Typography>
+                        <Typography component="p">
+                        <ln></ln>
                     </Typography>
-                    <Typography component="p">
-                    <ln></ln>
-                 </Typography>
-                
                 </Paper> 
-
               </Grid>
 
               <Grid item xs={4}>
@@ -104,6 +101,7 @@ class Home extends Component {
                 </CardActionArea>
               </Card>
               </Grid>
+
               <Grid item xs={4}>
               <Card className={classes.card}>
                 <CardActionArea>
@@ -128,6 +126,7 @@ class Home extends Component {
                 </CardActionArea>
               </Card>
               </Grid>
+
               <Grid item xs={4}>
               <Card className={classes.card}>
                 <CardActionArea>
@@ -150,11 +149,14 @@ class Home extends Component {
                         </Button>
                 </CardActionArea>
               </Card>
-              </Grid> 
+              </Grid>
+
               <Grid item xs={12}>
                 <Footer />
               </Grid>
+
             </Grid>
+
           </div>
         );
     }
