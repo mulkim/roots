@@ -67,6 +67,17 @@ class Home extends Component {
                 </Card>
               </Grid>
 
+              <Grid container item xs={12}>	
+                <Paper className={classes.paper}>	
+                    <Typography variant="h5" component="h3">	
+                        <ln></ln>	
+                        </Typography>	
+                        <Typography component="p">	
+                        <ln></ln>	
+                    </Typography>	
+                </Paper> 	
+              </Grid>
+
               <Grid container item xs={4}>
               <Card className={classes.card}>
                 <CardActionArea>
