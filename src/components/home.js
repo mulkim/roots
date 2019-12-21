@@ -57,7 +57,7 @@ class Home extends Component {
         return (
         <div className={classNames('fillParent', classes.container, classes.root)}>
             <Grid container spacing={2}>
-              <Grid item xs={12}>
+              <Grid container item xs={12}>
                 <Card className={classes.card}>
                     <CardMedia
                         className={classes.image_media}
@@ -67,7 +67,7 @@ class Home extends Component {
                 </Card>
               </Grid>
 
-              <Grid item xs={12}>
+              <Grid container item xs={12}>
                 <Paper className={classes.paper}>
                     <Typography variant="h5" component="h3">
                         <ln></ln>
@@ -78,7 +78,7 @@ class Home extends Component {
                 </Paper> 
               </Grid>
 
-              <Grid item xs={4}>
+              <Grid container item xs={4}>
               <Card className={classes.card}>
                 <CardActionArea>
                 <CardMedia
@@ -102,7 +102,7 @@ class Home extends Component {
               </Card>
               </Grid>
 
-              <Grid item xs={4}>
+              <Grid container item xs={4}>
               <Card className={classes.card}>
                 <CardActionArea>
                 <CardMedia
@@ -127,7 +127,7 @@ class Home extends Component {
               </Card>
               </Grid>
 
-              <Grid item xs={4}>
+              <Grid container item xs={4}>
               <Card className={classes.card}>
                 <CardActionArea>
                 <CardMedia
@@ -151,7 +151,7 @@ class Home extends Component {
               </Card>
               </Grid>
 
-              <Grid item xs={12}>
+              <Grid container item xs={12}>
                 <Footer />
               </Grid>
 
