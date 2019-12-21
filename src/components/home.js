@@ -41,13 +41,13 @@ const styles = theme => ({
         color: theme.palette.text.secondary,
     },
     card: {
-        maxWidth: 800,
+        maxWidth: 1600,
     },
     image_media: {
         height: 620,
     },
     card_media : {
-        height: 325,
+        
     }
   });
 
