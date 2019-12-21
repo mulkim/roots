@@ -57,7 +57,7 @@ class Home extends Component {
         return (
         <div className={classNames('fillParent', classes.container, classes.root)}>
             <Grid container spacing={2}>
-              <Grid container item xs={12}>
+              <Grid container item maxWidth="sm" xs={12}>
                 <Card className={classes.card}>
                     <CardMedia
                         className={classes.image_media}
