@@ -15,7 +15,9 @@ const styles = theme => ({
     textAlign: 'left',
   },
   menubar: {
-    marginLeft: 350,
+    marginLeft: 150,
+    marginRight: 0,
+    position: 'relative',
   }
 });
 
@@ -35,35 +37,35 @@ class RootsToolbar extends Component {
     return (
       <NoSsr>
       <div className={classes.root}>
-        <AppBar position="absolute">
+        <AppBar position="fixed">
           <Tabs variant="standard" value={value} onChange={this.handleChange}>
-          <div className={classes.name}>
-            <Typography 
-                variant="h6"
-                color="inherit">
-              ROOTS
-            </Typography>
+            <div className={classes.name}>
+              <Typography 
+                  variant="h4"
+                  color="inherit">
+                ROOTS
+              </Typography>
             </div>
             <div className={classes.menubar}>
-            <Tab label="Home"
-                  component={Link} 
-                  to='/'/>
-            <Tab label="About"
-                  component={Link}  
-                  to='/about'/>
-            <Tab label="Jobs" 
-                  component={Link}  
-                  to="/jobs" />
-            <Tab label="Partners"
-                  component={Link}  
-                  to="/partners" />
-            <Tab label="Learn" 
-                  component={Link}  
-                  to="learn" />
-            <Tab label="Contact"
-                  component={Link}  
-                  to="/contact" />
-              </div>
+              <Tab label="Home"
+                    component={Link} 
+                    to='/'/>
+              <Tab label="About"
+                    component={Link}  
+                    to='/about'/>
+              <Tab label="Jobs" 
+                    component={Link}  
+                    to="/jobs" />
+              <Tab label="Partners"
+                    component={Link}  
+                    to="/partners" />
+              <Tab label="Learn" 
+                    component={Link}  
+                    to="learn" />
+              <Tab label="Contact"
+                    component={Link}  
+                    to="/contact" />
+            </div>
           </Tabs>
         </AppBar>
       </div>
